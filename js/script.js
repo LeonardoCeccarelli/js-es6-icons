@@ -105,11 +105,24 @@ const iconArray = [
 
 const cardContainer = document.getElementById("cardContainer")
 
+// Individuo la select dove inserire dinamicamente il type dell'icona
+
+const selectTypeIcon = document.getElementById("selectTypeIcon")
+
+// Creo array dove inserire solo il type di ciascu oggetto
+
+const typeIcon = []
+
 // Tramite ciclo for inserisco le icone nell'html
 for (let i = 0; i < iconArray.length; i++) {
     const singleIcon = iconArray[i];
 
     const { name, prefix, type, family } = singleIcon
+
+    if (!typeIcon.includes(type)) {
+        typeIcon.push(type)
+    }
+
 
     let iconColor;
 
@@ -127,8 +140,38 @@ for (let i = 0; i < iconArray.length; i++) {
             break;
     }
 
-    cardContainer.innerHTML += `<li>
-                                    <i class="${family} ${prefix}${name} ${iconColor}"></i>
+    cardContainer.innerHTML += `<li class="icon_card icon_${type}">
+                                    <i class="${family} ${prefix + name} ${iconColor}"></i>
                                     <h4>${name}</h4>
                                 </li>`
 }
+
+// Tramite ciclo inserisco dinamicamente le oprion dentro
+// la select in base alla chiave type
+for (let i = 0; i < typeIcon.length; i++) {
+    const singleType = typeIcon[i];
+
+    selectTypeIcon.innerHTML += `<option value="${singleType}">${singleType}</option>`
+}
+
+const singleCard = document.querySelectorAll(".icon_card")
+
+console.log(singleCard);
+
+selectTypeIcon.addEventListener("change", function () {
+    const value = this.value
+
+    console.log(value);
+
+    for (let i = 0; i < singleCard.length; i++) {
+        const card = singleCard[i];
+
+        card.style.display = "initial"
+
+        if (value === "all") {
+
+        } else if (!card.classList.contains(`icon_${value}`)) {
+            card.style.display = "none"
+        }
+    }
+})

@@ -60,6 +60,10 @@
     font-size: 0.8rem;
 }
 
+#selectTypeIcon option {
+    text-transform: uppercase;
+}
+
 /* Classi dinamiche */
 
 .c_icon_blue {
