@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #ddd;
+}
+
+.title_container {
+    background-color: white;
+}
+
 .title_container h1 {
     color: #29b1dd;
     padding: 15px 0 5px 10px;
@@ -11,7 +19,8 @@
 }
 
 .select_container {
-    background-color: #29b1dd;
+    /* background-color: #29b1dd; */
+    background-image: linear-gradient(to right, #29b1dd, #84b8c9, #15637e, #15637e, #84b8c9, #29b1dd);
     color: white;
     display: flex;
     justify-content: center;
@@ -21,11 +30,23 @@
 
 .select_container h3 {
     margin-right: 10px;
+    text-shadow: 1px 0 0 rgb(0 0 0), -1px 0 0 rgb(0 0 0), 0 1px 0 rgb(0 0 0), 0 -1px 0 rgb(0 0 0), 1px 1px rgb(0 0 0), -1px -1px 0 rgb(0 0 0), 1px -1px 0 rgb(0 0 0), -1px 1px 0 rgb(0 0 0);
 }
 
 .select_container select {
     padding: 3px 0;
     padding-right: 20px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 0 0 5px black;
+}
+
+.select_container select:focus-visible {
+    outline: none;
 }
 
 .card_container {
@@ -34,7 +55,6 @@
     padding-bottom: 35px;
     display: flex;
     gap: 20px;
-    /* justify-content: space-evenly; */
     flex-wrap: wrap;
 }
 
@@ -46,6 +66,14 @@
     margin: 30px 10px;
     text-align: center;
     border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 0px #00000069;
+    transition: all linear .2s;
+}
+
+.card_container li:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 15px 5px 0px #00000069;
 }
 
 .card_container li i {

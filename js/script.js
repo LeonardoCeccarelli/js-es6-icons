@@ -98,7 +98,7 @@ const iconArray = [
         prefix: 'fa-',
         type: 'user',
         family: 'fas'
-    }
+    },
 ]
 
 // Individuo nell'html il contenitore dove inserire le card
@@ -156,12 +156,12 @@ for (let i = 0; i < typeIcon.length; i++) {
 
 const singleCard = document.querySelectorAll(".icon_card")
 
-console.log(singleCard);
+// console.log(singleCard);
 
 selectTypeIcon.addEventListener("change", function () {
     const value = this.value
 
-    console.log(value);
+    // console.log(value);
 
     for (let i = 0; i < singleCard.length; i++) {
         const card = singleCard[i];
