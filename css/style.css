@@ -56,4 +56,20 @@
 .card_container li h4 {
     letter-spacing: 0.5px;
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* Classi dinamiche */
+
+.c_icon_blue {
+    color: #0000ff;
+}
+
+.c_icon_yellow {
+    color: #ffa500;
+}
+
+.c_icon_purple {
+    color: #800080;
 }
