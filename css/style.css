@@ -3,3 +3,57 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.title_container h1 {
+    color: #29b1dd;
+    padding: 15px 0 5px 10px;
+    font-size: 2.3rem;
+}
+
+.select_container {
+    background-color: #29b1dd;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.select_container h3 {
+    margin-right: 10px;
+}
+
+.select_container select {
+    padding: 3px 0;
+    padding-right: 20px;
+}
+
+.card_container {
+    background-color: #ddd;
+    padding-top: 10px;
+    padding-bottom: 35px;
+    display: flex;
+    gap: 20px;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+}
+
+.card_container li {
+    background-color: white;
+    list-style: none;
+    padding: 20px 35px;
+    width: calc(20% - 36px);
+    margin: 30px 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card_container li i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.card_container li h4 {
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
